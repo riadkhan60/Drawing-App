@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+  --main-color: #fdfffc;
+  --secondary-color: #d7fffa;
+  --conatainer-size: 80%;
+}
+
+/* Default Changes */
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: 'Bebas Neue', sans-serif;
+  overflow: hidden;
+  background-color: var(--main-color);
+}
+
+button {
+  font-family: 'Bebas Neue', sans-serif;
+  outline: none;
+  border: none;
+}
+
+.main-button {
+  padding: 1rem 3rem;
+  font-size: 2.5rem;
+}
+
+/* Main Part */
+#header {
+  /* background: var(--secondary-color); */
+}
+
+#nav-menu {
+  width: var(--conatainer-size);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+#header-logo {
+  font-size: 5rem;
+  cursor: pointer;
+}
+#header-logo:hover {
+  color: #24094f;
+}
+#nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  font-size: 2rem;
+}
+.nav-list a {
+  transition:all 0.3s ease-in-out ; 
+}
+.nav-list a:hover{
+  color: #bfa8e4;
+}
+
+/* hero */
+#hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+#hero-content h1 {
+  font-size: 5rem;
+}
+
+#hero-content h1:hover {
+  color: #24094f;
+}
+
+/* ------------------------------ */
+#hero-content h1 span {
+  background-color: #ca4246;
+  background-image: linear-gradient(
+    45deg,
+    #ca4246 16.666%,
+    #e16541 16.666%,
+    #e16541 33.333%,
+    #f18f43 33.333%,
+    #f18f43 50%,
+    #8b9862 50%,
+    #8b9862 66.666%,
+    #476098 66.666%,
+    #476098 83.333%,
+    #a7489b 83.333%
+  );
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+}
+
+#hero-content h1 span:hover {
+  animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+@keyframes rainbow-text-simple-animation-rev {
+  0% {
+    background-size: 650%;
+  }
+  40% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+@keyframes rainbow-text-simple-animation {
+  0% {
+    background-size: 100%;
+  }
+  80% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 650%;
+  }
+}
+
+/* ------------------------------ */
+
+#hero-content p {
+  font-size: 2rem;
+  max-width: 500px;
+}
+
+#drawing-app-button {
+  position: relative;
+  margin-top: 2rem;
+  border: 4px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #ff6cc9);
+  transition: all 0.6s ease-in-out;
+}
+
+#drawing-app-button:hover {
+  border-image-source: linear-gradient(to left, #3ad597, #ff0000);
+  cursor: pointer;
+}
+
+.img-1 {
+  position: absolute;
+  top: 190px;
+  left: -190px;
+  transform: rotate(60deg);
+}
+.img-2 {
+  position: absolute;
+  top: 190px;
+  right: -190px;
+  transform: rotate(-60deg);
+}
