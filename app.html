@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="shortcut icon"
+      href="/src/Imgs/fav-icon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/appStyle.css" />
+    <script src="src/JS/script.js" defer></script>
+    <title>DrawNow | App</title>
+  </head>
+  <body>
+    <main id="drawing-bord">
+      <aside id="sideMenu">
+        <ul id="side-tools">
+          <li id="shape-tools">
+            <span class="tool-higlight"> Shapes </span>
+            <ul class="shape-tool-lists">
+              <li class="shape-tool tool" id="rectangle">
+                <span class="shape-icon material-symbols-outlined">
+                  rectangle
+                </span>
+                <span> Rectangle </span>
+              </li>
+              <li class="shape-tool tool" id="triangle">
+                <span class="shape-icon material-symbols-outlined">
+                  change_history </span
+                ><span> Triangle </span>
+              </li>
+              <li class="shape-tool tool" id="circle">
+                <span class="shape-icon material-symbols-outlined">
+                  radio_button_unchecked </span
+                ><span> Circle </span>
+              </li>
+              <li class="shape-tool">
+                <span class="shape-icon">
+                  <input
+                    type="checkbox"
+                    name="fill-color"
+                    class="fill-color"
+                    id="fill-color"
+                  />
+                </span>
+                <span>
+                  <label class="fill-color" for="fill-color">
+                    Fill Color
+                  </label>
+                </span>
+              </li>
+            </ul>
+          </li>
+          <li id="drawing-tools">
+            <span class="tool-higlight"> Options </span>
+            <ul class="drawing-tool-lists">
+              <li class="drawing-tool tool active-tool" id="brush">
+                <span class="material-symbols-outlined"> brush </span>
+                <span> Brush </span>
+              </li>
+              <li class="drawing-tool tool" id="erase">
+                <span class="material-symbols-outlined"> ink_eraser </span>
+                <span> Eraser </span>
+              </li>
+              <li class="drawing-tool">
+                <input type="range" name="" id="brush-range" min="1" max="60" value="1" step="1" />
+              </li>
+            </ul>
+          </li>
+          <li id="color-tools">
+            <span class="tool-higlight"> Colors </span>
+            <ul id="color-options">
+              <li class="color-option white"></li>
+              <li class="color-option color-active black"></li>
+              <li class="color-option blue"></li>
+              <li class="color-option red"></li>
+              <li class="color-option green"></li>
+            </ul>
+            <div class="color-pick">
+              <input type="color" name="choice-color" id="choice-color" />
+            </div>
+          </li>
+          <li id="action-tools">
+            <button class="btn-claer btn">Clear Canvas</button>
+            <button class="btn-save btn">Save As Images</button>
+          </li>
+        </ul>
+      </aside>
+
+      <section id="drawing-space">
+        <canvas id="drawing"> </canvas>
+      </section>
+    </main>
+  </body>
+</html>

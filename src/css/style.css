@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+
 :root {
   --main-color: #fdfffc;
   --secondary-color: #d7fffa;
+  --side-menu-background-color: #034377;
   --conatainer-size: 80%;
 }
 
@@ -37,7 +39,6 @@ body {
 }
 
 button {
-  font-family: 'Bebas Neue', sans-serif;
   outline: none;
   border: none;
 }
@@ -49,7 +50,7 @@ button {
 
 /* Main Part */
 #header {
-  /* background: var(--secondary-color); */
+  background: var(--secondary-color);
 }
 
 #nav-menu {
@@ -75,9 +76,9 @@ button {
   font-size: 2rem;
 }
 .nav-list a {
-  transition:all 0.3s ease-in-out ; 
+  transition: all 0.3s ease-in-out;
 }
-.nav-list a:hover{
+.nav-list a:hover {
   color: #bfa8e4;
 }
 
@@ -149,7 +150,6 @@ button {
   }
 }
 
-/* ------------------------------ */
 
 #hero-content p {
   font-size: 2rem;
@@ -157,6 +157,7 @@ button {
 }
 
 #drawing-app-button {
+  font-family: 'Bebas Neue', sans-serif;
   position: relative;
   margin-top: 2rem;
   border: 4px solid;
@@ -182,3 +183,5 @@ button {
   right: -190px;
   transform: rotate(-60deg);
 }
+/* ------------------------------ */
+
