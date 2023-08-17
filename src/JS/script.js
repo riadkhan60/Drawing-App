@@ -19,6 +19,17 @@ colorOptions.forEach((x, y, arr) => {
   });
 });
 
+
+colorwheel.addEventListener('change', x => {
+  const color = x.target.value;
+  ctx.fillStyle = color;
+  ctx.strokeStyle = color;
+  currentColer = color;
+  colorOptions.forEach(x => { 
+   x.classList.remove('color-active');
+  })
+})
+
 let fillStyle;
 
 fillInput.addEventListener('change', (e) => {
