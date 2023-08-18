@@ -3,9 +3,21 @@ const tools = document.querySelectorAll('.tool');
 const brushSize = document.querySelector('#brush-range');
 const fillInput = document.querySelector('#fill-color');
 const colorwheel = document.querySelector('#choice-color');
+const clearBtn = document.querySelector('.btn-claer');
+const saveBtn = document.querySelector('.btn-save');
 
 let currentColer;
 
+clearBtn.addEventListener('click', () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
+
+saveBtn.addEventListener('click', () => { 
+  const link = document.createElement('a');
+  link.download = 'img.jpg';
+  link.href = canvas.toDataURL();
+  link.click();
+})
 
 const colorOptions = document.querySelectorAll('.color-option');
 colorOptions.forEach((x, y, arr) => {
@@ -19,16 +31,15 @@ colorOptions.forEach((x, y, arr) => {
   });
 });
 
-
-colorwheel.addEventListener('change', x => {
+colorwheel.addEventListener('change', (x) => {
   const color = x.target.value;
   ctx.fillStyle = color;
   ctx.strokeStyle = color;
   currentColer = color;
-  colorOptions.forEach(x => { 
-   x.classList.remove('color-active');
-  })
-})
+  colorOptions.forEach((x) => {
+    x.classList.remove('color-active');
+  });
+});
 
 let fillStyle;
 
@@ -71,7 +82,6 @@ window.addEventListener('mousedown', (e) => {
     ctx.strokeStyle = currentColer;
   }
 
-  
   ctx.lineWidth = brushSizeValue;
   ctx.beginPath();
   dwaingActive = true;
